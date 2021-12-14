@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/thumb.jpg" />
     <title>jokibyace</title>
   </head>
   <body id="home">
@@ -36,7 +37,7 @@
               <a class="nav-link" href="#pricelist">Pricelist</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact Me</a>
+              <a class="nav-link" href="#order">Order</a>
             </li>
           </ul>
         </div>
@@ -133,29 +134,69 @@
     </section>
     <!-- Akhir Pricelist -->
     <!-- Contact -->
-    <section id="contact">
+    <section id="order">
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2>Contact Me</h2>
+            <h2>Order</h2>
           </div>
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6">
             <form>
               <div class="mb-3">
-                <label for="name" class="form-label">Nama Lengkap</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name" />
+                <label for="id" class="form-label">ID</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="id"
+                  aria-describedby="id"
+                  placeholder="Masukkan id akun Anda"
+                  required
+                />
               </div>
               <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" />
+                <label for="server" class="form-label">Server</label>
+                <input
+                  name="server"
+                  type="number"
+                  class="form-control"
+                  id="server"
+                  placeholder="Masukkan server akun Anda"
+                  required
+                />
               </div>
               <div class="mb-3">
-                <label for="pesan" class="form-label">Pesan</label>
-                <textarea class="form-control" id="pesan" rows="3"></textarea>
+                <label for="server" class="form-label">Nick</label>
+                <input
+                  name="nick"
+                  type="text"
+                  class="form-control"
+                  id="nick"
+                  placeholder="Masukkan nickname akun Anda"
+                  required
+                />
               </div>
-              <div class="mb-3"><button type="submit" class="btn btn-primary">Kirim</button></div>
+              <div class="mb-3">
+                <label for="server" class="form-label">Jumlah</label>
+                <input
+                  name="jumlah"
+                  type="number"
+                  class="form-control"
+                  id="jumlah"
+                  placeholder="Masukkan jumlah order"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="submit"
+                  class="btn text-white"
+                  style="background-color: rgb(177, 104, 35)"
+                  value="Kirim"
+                  onclick="gotowhatsapp()"
+                />
+              </div>
             </form>
           </div>
         </div>
@@ -177,5 +218,30 @@
     </footer>
     <!-- Akhir Footer -->
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function gotowhatsapp() {
+        var id = document.getElementById("id").value;
+        var server = document.getElementById("server").value;
+        var nick = document.getElementById("nick").value;
+        var jumlah = document.getElementById("jumlah").value;
+
+        var url =
+          "https://wa.me/+6285820052803?text=" +
+          "ID: " +
+          id +
+          "%0a" +
+          "SERVER: " +
+          server +
+          "%0a" +
+          "NICK: " +
+          nick +
+          "%0a" +
+          "JUMLAH: " +
+          jumlah +
+          "Sertakan ss diamond sekarang";
+
+        window.open(url, "_blank").focus();
+      }
+    </script>
   </body>
 </html>
