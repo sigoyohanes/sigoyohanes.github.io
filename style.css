@@ -2,8 +2,18 @@ body {
   min-height: 2000px;
 }
 
-a {
-  text-decoration: none;
+.form-control:focus {
+  border-width: 3px;
+  border-color: rgb(243, 182, 126);
+  box-shadow: none;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button,
+input[type="number"] {
+  -webkit-appearance: none;
+  margin: 0;
+  -moz-appearance: textfield;
 }
 
 section {

@@ -49,7 +49,7 @@
     <section class="jumbotron text-center">
       <img src="img/logo.jpg" alt="acestore" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">jokibyace</h1>
-      <p class="lead">Topup diamond mobile legend | Jasa joki mobile legend</p>
+      <p class="lead">Topup diamond | Jasa joki Mobile Legends</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -137,7 +137,7 @@
       </svg>
     </section>
     <!-- Akhir Pricelist -->
-    <!-- Contact -->
+    <!-- Order -->
     <section id="order">
       <div class="container">
         <div class="row text-center mb-3">
@@ -145,63 +145,46 @@
             <h2>Order</h2>
           </div>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <form autocomplete="off">
-              <div class="mb-3">
-                <label for="id" class="form-label">ID</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="id"
-                  aria-describedby="id"
-                  placeholder="Masukkan id akun Anda"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <label for="server" class="form-label">Server</label>
-                <input
-                  name="server"
-                  type="number"
-                  class="form-control"
-                  id="server"
-                  placeholder="Masukkan server akun Anda"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <label for="server" class="form-label">Nick</label>
-                <input
-                  name="nick"
-                  type="text"
-                  class="form-control"
-                  id="nick"
-                  placeholder="Masukkan nickname akun Anda"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <label for="server" class="form-label">Jumlah</label>
-                <input
-                  name="jumlah"
-                  type="number"
-                  class="form-control"
-                  id="jumlah"
-                  placeholder="Masukkan jumlah order"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <input
-                  type="submit"
-                  class="btn text-white"
-                  style="background-color: rgb(177, 104, 35)"
-                  value="Kirim"
-                  onclick="gotowhatsapp()"
-                />
-              </div>
-            </form>
+        <div class="card" style="border-color: rgb(243, 182, 126); border-width: 2px; border-style: dotted">
+          <div class="row justify-content-center p-4">
+            <div class="col-md-6">
+              <form autocomplete="off">
+                <div class="row">
+                  <div class="col mb-3">
+                    <label for="id" class="form-label"></label>
+                    <input type="number" class="form-control" id="id" aria-describedby="id" placeholder="ID" required />
+                  </div>
+                  <div class="col mb-3">
+                    <label for="server" class="form-label"></label>
+                    <input name="server" type="number" class="form-control" id="server" placeholder="Server" required />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="server" class="form-label"></label>
+                  <input name="nick" type="text" class="form-control" id="nick" placeholder="Nickname" required />
+                </div>
+                <div class="mb-3">
+                  <label for="server" class="form-label"></label>
+                  <input
+                    name="jumlah"
+                    type="number"
+                    class="form-control"
+                    id="jumlah"
+                    placeholder="Jumlah order"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="submit"
+                    class="btn text-white"
+                    style="background-color: rgb(177, 104, 35)"
+                    value="Kirim"
+                    onclick="gotowhatsapp()"
+                  />
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -213,7 +196,7 @@
         ></path>
       </svg>
     </section>
-    <!-- Akhir Contact -->
+    <!-- Akhir Order -->
     <!-- Footer -->
     <footer class="text-white text-center pb-4" style="background-color: rgb(177, 104, 35)">
       <p>
@@ -248,7 +231,6 @@
           "%0a" +
           "%0a" +
           "_Sertakan ss diamond sekarang_";
-
         window.open(url, "_blank").focus();
       }
     </script>
