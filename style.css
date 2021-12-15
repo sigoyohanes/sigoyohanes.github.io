@@ -2,6 +2,9 @@ body {
   min-height: 2000px;
 }
 
+a {
+  text-decoration: none;
+}
 .form-control:focus {
   border-width: 3px;
   border-color: rgb(243, 182, 126);
